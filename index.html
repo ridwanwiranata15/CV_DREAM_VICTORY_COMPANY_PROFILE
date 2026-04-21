@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikLive Studio • Company Profile</title>
+  <!-- Tailwind + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .menu-item {
+      transition: all 0.2s ease;
+    }
+    .menu-item.active {
+      background-color: #f5e6d3;
+      border-left: 4px solid #8B5E3C;
+      color: #5C3A21;
+      font-weight: 600;
+    }
+    /* animasi untuk deskripsi */
+    .fade-in {
+      animation: fadeEffect 0.35s ease-out;
+    }
+    @keyframes fadeEffect {
+      0% { opacity: 0.3; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .brown-soft { color: #5C3A21; }
+    .bg-brown-light { background-color: #f9f3ed; }
+    /* Tambahan untuk navbar background */
+    .nav-link {
+      transition: background-color 0.2s;
+    }
+    .nav-link:hover {
+      background-color: #e8d9cd;
+    }
+  </style>
+</head>
+<body class="bg-[#fdfaf7] text-gray-800 scroll-smooth">
+
+  <!-- Navigasi dengan background color solid -->
+  <nav class="sticky top-0 z-30 bg-[#f3ebe4] shadow-sm border-b border-[#d9c5b2]">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#8B5E3C] to-[#a67c5b] flex items-center justify-center shadow-sm">
+          <i class="fas fa-gamepad text-white text-xl"></i>
+        </div>
+        <span class="text-2xl font-semibold tracking-tight text-[#5C3A21]">TikLive<span class="text-[#8B5E3C]">Studio</span></span>
+      </div>
+      <!-- Desktop menu dengan background color pada link -->
+      <div class="hidden md:flex gap-2 text-[#4a3729] font-medium">
+        <a href="#beranda" class="nav-link px-5 py-2.5 rounded-xl flex items-center gap-1.5 hover:bg-[#e8d9cd] transition">
+          <i class="fas fa-home text-sm"></i> Beranda
+        </a>
+        <a href="#kisah-sukses" class="nav-link px-5 py-2.5 rounded-xl flex items-center gap-1.5 hover:bg-[#e8d9cd] transition">
+          <i class="fas fa-star text-sm"></i> Kisah Sukses
+        </a>
+        <a href="#hubungi" class="nav-link px-5 py-2.5 rounded-xl flex items-center gap-1.5 hover:bg-[#e8d9cd] transition">
+          <i class="fas fa-envelope text-sm"></i> Hubungi
+        </a>
+      </div>
+      <!-- Mobile menu tetap sederhana -->
+      <div class="md:hidden flex gap-5 text-sm font-medium">
+        <a href="#beranda" class="px-3 py-2 rounded-lg bg-[#e7dbd1] text-[#5C3A21]"><i class="fas fa-home"></i></a>
+        <a href="#kisah-sukses" class="px-3 py-2 rounded-lg bg-[#e7dbd1] text-[#5C3A21]"><i class="fas fa-star"></i></a>
+        <a href="#hubungi" class="px-3 py-2 rounded-lg bg-[#e7dbd1] text-[#5C3A21]"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-5 sm:px-8 py-10 md:py-14">
+    
+    <!-- ===== BERANDA ===== -->
+    <section id="beranda" class="scroll-mt-24">
+      <!-- Pengenalan Perusahaan -->
+      <div class="mb-12 text-center md:text-left">
+        <span class="inline-block px-4 py-1.5 bg-[#efe2d6] text-[#5C3A21] rounded-full text-sm font-medium tracking-wide mb-4">
+          <i class="fas fa-video mr-1"></i> Live Gaming di TikTok
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#3e2c1e] leading-tight">
+          Bangun Karier Live Streaming <br class="hidden md:block"/> bersama <span class="text-[#8B5E3C]">TikLive Studio</span>
+        </h1>
+        <p class="text-lg text-gray-600 max-w-3xl mt-4 md:mt-5 leading-relaxed">
+          Kami adalah mitra resmi TikTok Live yang memberdayakan kreator game. Dari streamer pemula hingga profesional, 
+          kami sediakan ekosistem lengkap untuk sukses di panggung live gaming.
+        </p>
+      </div>
+
+      <!-- Card utama dengan dua card di dalamnya (menu & deskripsi) -->
+      <div class="bg-white rounded-3xl shadow-xl border border-[#e7dbd1] overflow-hidden transition-all">
+        <div class="p-6 md:p-8">
+          <div class="flex flex-col md:flex-row gap-6 lg:gap-8">
+            
+            <!-- Card kiri: Menu -->
+            <div class="md:w-1/3 bg-[#fdfaf7] rounded-2xl p-5 border border-[#e7dbd1] shadow-inner">
+              <h3 class="text-xl font-semibold text-[#4a2e1e] mb-4 flex items-center gap-2">
+                <span class="w-1.5 h-6 bg-[#8B5E3C] rounded-full"></span> 
+                <i class="fas fa-compass text-[#8B5E3C]"></i> Jelajahi Keunggulan
+              </h3>
+              <ul class="space-y-1.5" id="menuList">
+                <li data-key="visi" class="menu-item active px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-eye text-[#8B5E3C] w-5"></i> Visi dan Misi
+                </li>
+                <li data-key="pertumbuhan" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-chart-line text-[#8B5E3C] w-5"></i> Pertumbuhan
+                </li>
+                <li data-key="bangun" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-handshake text-[#8B5E3C] w-5"></i> Bangun dengan TikLive
+                </li>
+                <li data-key="manfaat" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-gift text-[#8B5E3C] w-5"></i> Manfaat
+                </li>
+                <li data-key="insentif" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-coins text-[#8B5E3C] w-5"></i> Kebijakan Insentif
+                </li>
+                <li data-key="ekosistem" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-leaf text-[#8B5E3C] w-5"></i> Ekosistem Sehat
+                </li>
+                <li data-key="alat" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-toolbox text-[#8B5E3C] w-5"></i> Alat Produk
+                </li>
+                <li data-key="praktik" class="menu-item px-4 py-3 rounded-xl cursor-pointer transition-all flex items-center gap-3 text-[#4a3729] hover:bg-[#efe2d6]">
+                  <i class="fas fa-medal text-[#8B5E3C] w-5"></i> Praktik Terbaik
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Card kanan: Deskripsi -->
+            <div class="md:w-2/3 bg-white rounded-2xl p-6 md:p-7 border border-[#e7dbd1] shadow-sm">
+              <h4 class="text-2xl font-bold text-[#3e2c1e] mb-3 flex items-center gap-2" id="descTitle">
+                <i class="fas fa-eye text-[#8B5E3C]"></i> Visi dan Misi
+              </h4>
+              <div id="descContent" class="text-gray-700 leading-relaxed space-y-3 fade-in">
+                <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-flag-checkered mr-1"></i>Visi:</span> Menjadi rumah bagi talenta live gaming TikTok terdepan di Asia Tenggara.</p>
+                <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-bullseye mr-1"></i>Misi:</span> Menyediakan platform, pelatihan, dan dukungan penuh agar setiap streamer bisa menghasilkan konten interaktif berkualitas tinggi serta pendapatan berkelanjutan.</p>
+                <p class="italic text-sm text-gray-500 mt-4"><i class="fas fa-quote-left mr-1 text-[#b28b70]"></i> Kami percaya setiap gamer punya cerita.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-1.5 bg-gradient-to-r from-[#d4b89c] via-[#b28b70] to-[#d4b89c]"></div>
+      </div>
+    </section>
+
+    <!-- ===== KISAH SUKSES ===== -->
+    <section id="kisah-sukses" class="scroll-mt-24 mt-24">
+      <div class="text-center mb-12">
+        <span class="text-[#8B5E3C] font-semibold tracking-wider text-sm uppercase"><i class="fas fa-users mr-1"></i> Testimoni Karyawan</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#3e2c1e] mt-2">Kisah Sukses dari Tim Kami</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-3">Dengarkan langsung cerita para kreator dan staf yang berkembang bersama TikLive Studio.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Testimoni 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-[#e7dbd1] hover:shadow-lg transition">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full bg-[#d9c0ae] flex items-center justify-center text-2xl font-bold text-[#5C3A21]"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <h4 class="font-bold text-[#3e2c1e] text-lg">Rina Amalia</h4>
+              <p class="text-sm text-[#8B5E3C]"><i class="fas fa-mobile-alt mr-1"></i>Streamer Game Mobile</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic"><i class="fas fa-quote-right text-[#b28b70] mr-1 opacity-50"></i> Gabung TikLive Studio bener-bener ngubah cara aku live. Dapet mentorship rutin, tools analytics keren, dan insentif yang bikin semangat. Sekarang penghasilan 3x lipat!</p>
+          <div class="mt-4 text-[#a67c5b] text-sm"><i class="far fa-calendar-alt mr-1"></i> 4 bulan bersama TikLive</div>
+        </div>
+        <!-- Testimoni 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-[#e7dbd1] hover:shadow-lg transition">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full bg-[#d9c0ae] flex items-center justify-center text-2xl font-bold text-[#5C3A21]"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <h4 class="font-bold text-[#3e2c1e] text-lg">Dimas Pratama</h4>
+              <p class="text-sm text-[#8B5E3C]"><i class="fas fa-users-cog mr-1"></i>Content & Community Lead</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic"><i class="fas fa-quote-right text-[#b28b70] mr-1 opacity-50"></i> Budaya kerja di sini sangat suportif. Aku merasa dihargai dan didorong untuk berinovasi. Ekosistem sehat yang dibangun bikin kita semua tumbuh bareng.</p>
+          <div class="mt-4 text-[#a67c5b] text-sm"><i class="far fa-calendar-alt mr-1"></i> 1 tahun 2 bulan</div>
+        </div>
+        <!-- Testimoni 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-[#e7dbd1] hover:shadow-lg transition">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full bg-[#d9c0ae] flex items-center justify-center text-2xl font-bold text-[#5C3A21]"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <h4 class="font-bold text-[#3e2c1e] text-lg">Sari Wijaya</h4>
+              <p class="text-sm text-[#8B5E3C]"><i class="fas fa-chalkboard-teacher mr-1"></i>TikTok Live Trainer</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic"><i class="fas fa-quote-right text-[#b28b70] mr-1 opacity-50"></i> Alat produk yang disediakan sangat membantu streamer pemula. Aku bangga jadi bagian dari tim yang selalu update praktik terbaik live gaming.</p>
+          <div class="mt-4 text-[#a67c5b] text-sm"><i class="far fa-calendar-alt mr-1"></i> 8 bulan berkembang</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HUBUNGI ===== -->
+    <section id="hubungi" class="scroll-mt-24 mt-24">
+      <div class="bg-white rounded-3xl shadow-xl border border-[#e7dbd1] overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <div class="p-8 md:p-10 bg-[#fdfaf7]">
+            <h2 class="text-3xl font-bold text-[#3e2c1e] mb-4 flex items-center gap-2"><i class="fas fa-paper-plane text-[#8B5E3C]"></i> Hubungi Kami</h2>
+            <p class="text-gray-600 mb-8">Tertarik menjadi bagian dari keluarga TikLive Studio? Tim kami siap membantu.</p>
+            
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#e7dbd1] flex items-center justify-center text-[#5C3A21] text-xl"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h4 class="font-semibold text-[#4a2e1e]">Alamat Studio</h4>
+                  <p class="text-gray-600">Jl. Streaming Raya No. 88, Jakarta Selatan</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#e7dbd1] flex items-center justify-center text-[#5C3A21] text-xl"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h4 class="font-semibold text-[#4a2e1e]">Email</h4>
+                  <p class="text-gray-600">partner@tiklivestudio.id</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#e7dbd1] flex items-center justify-center text-[#5C3A21] text-xl"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <h4 class="font-semibold text-[#4a2e1e]">WhatsApp</h4>
+                  <p class="text-gray-600">+62 812-3456-7890</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-5 mt-10 text-[#8B5E3C]">
+              <span><i class="fab fa-tiktok"></i> @tiklivestudio</span>
+              <span><i class="fab fa-instagram"></i> @tiklivestudio</span>
+            </div>
+          </div>
+          <div class="p-8 md:p-10 bg-white">
+            <h3 class="text-xl font-semibold text-[#3e2c1e] mb-5 flex items-center gap-2"><i class="far fa-comment-dots text-[#8B5E3C]"></i> Kirim Pesan</h3>
+            <form class="space-y-5">
+              <div>
+                <label class="block text-sm font-medium text-[#5C3A21] mb-1"><i class="far fa-user mr-1"></i>Nama Lengkap</label>
+                <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl border border-[#d9c5b2] bg-white focus:ring-2 focus:ring-[#b28b70] focus:border-transparent outline-none transition">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#5C3A21] mb-1"><i class="far fa-envelope mr-1"></i>Email</label>
+                <input type="email" placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-xl border border-[#d9c5b2] bg-white focus:ring-2 focus:ring-[#b28b70] outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#5C3A21] mb-1"><i class="far fa-edit mr-1"></i>Pesan</label>
+                <textarea rows="3" placeholder="Tulis pertanyaan atau ajakan kolaborasi..." class="w-full px-4 py-3 rounded-xl border border-[#d9c5b2] bg-white focus:ring-2 focus:ring-[#b28b70] outline-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-[#8B5E3C] hover:bg-[#6f4a2e] text-white font-semibold py-3.5 rounded-xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-20 border-t border-[#e7dbd1] pt-8 pb-6 text-center text-sm text-gray-500">
+      <p><i class="far fa-copyright mr-1"></i> 2026 TikLive Studio — Live Gaming Partner Resmi TikTok. Dibangun dengan sentuhan coklat elegan.</p>
+    </footer>
+  </main>
+
+  <!-- JavaScript Interaktif -->
+  <script>
+    (function() {
+      const contentData = {
+        visi: {
+          title: '<i class="fas fa-eye text-[#8B5E3C] mr-2"></i>Visi dan Misi',
+          html: `
+            <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-flag-checkered mr-1"></i>Visi:</span> Menjadi rumah bagi talenta live gaming TikTok terdepan di Asia Tenggara.</p>
+            <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-bullseye mr-1"></i>Misi:</span> Menyediakan platform, pelatihan, dan dukungan penuh agar setiap streamer bisa menghasilkan konten interaktif berkualitas tinggi serta pendapatan berkelanjutan.</p>
+            <p class="italic text-sm text-gray-500 mt-4"><i class="fas fa-quote-left mr-1 text-[#b28b70]"></i> Kami percaya setiap gamer punya cerita.</p>
+          `
+        },
+        pertumbuhan: {
+          title: '<i class="fas fa-chart-line text-[#8B5E3C] mr-2"></i>Pertumbuhan',
+          html: `
+            <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-arrow-up mr-1"></i>+217%</span> peningkatan jumlah streamer aktif dalam 12 bulan terakhir.</p>
+            <p>Total jam tayang live naik <span class="font-semibold">340%</span> year-on-year. Kami telah membantu lebih dari <span class="font-semibold">1.200 kreator</span> memonetisasi konten mereka.</p>
+            <p class="mt-3"><i class="fas fa-city text-[#8B5E3C] mr-1"></i>Ekspansi ke 5 kota baru dan kemitraan strategis dengan brand gaming ternama.</p>
+          `
+        },
+        bangun: {
+          title: '<i class="fas fa-handshake text-[#8B5E3C] mr-2"></i>Bangun dengan TikLive',
+          html: `
+            <p>Bergabunglah dengan <span class="font-semibold text-[#8B5E3C]">TikLive Studio</span> dan bangun karier impian di industri live streaming.</p>
+            <p>Kami menyediakan pelatihan intensif, akses ke studio profesional, dan dukungan manajemen personal. Baik kamu streamer, editor, atau host, kami punya tempat untukmu.</p>
+            <p class="mt-2 bg-[#f9f3ed] p-3 rounded-lg"><i class="fas fa-star text-[#8B5E3C] mr-1"></i> "Bersama TikLive, potensimu makin terasah."</p>
+          `
+        },
+        manfaat: {
+          title: '<i class="fas fa-gift text-[#8B5E3C] mr-2"></i>Manfaat',
+          html: `
+            <ul class="list-disc pl-5 space-y-1">
+              <li><i class="fas fa-dollar-sign text-[#8B5E3C] mr-1"></i>Pendapatan dari gift & brand deal</li>
+              <li><i class="fas fa-video text-[#8B5E3C] mr-1"></i>Akses studio siaran lengkap</li>
+              <li><i class="fas fa-microphone-alt text-[#8B5E3C] mr-1"></i>Pelatihan public speaking & strategi konten</li>
+              <li><i class="fas fa-users text-[#8B5E3C] mr-1"></i>Komunitas eksklusif & networking</li>
+              <li><i class="fas fa-headset text-[#8B5E3C] mr-1"></i>Support teknis 24/7</li>
+            </ul>
+            <p class="mt-3"><i class="fas fa-chart-pie mr-1"></i>Semua streamer mendapatkan dashboard performa real-time.</p>
+          `
+        },
+        insentif: {
+          title: '<i class="fas fa-coins text-[#8B5E3C] mr-2"></i>Kebijakan Insentif',
+          html: `
+            <p><span class="font-semibold text-[#8B5E3C]"><i class="fas fa-file-invoice mr-1"></i>Insentif transparan</span> berdasarkan performa dan engagement.</p>
+            <p>Struktur bonus progresif: semakin tinggi interaksi penonton, semakin besar reward. Ada bonus tambahan untuk event spesial dan campaign.</p>
+            <p><i class="fas fa-calendar-week mr-1"></i>Pembayaran dilakukan mingguan melalui sistem terpercaya.</p>
+          `
+        },
+        ekosistem: {
+          title: '<i class="fas fa-leaf text-[#8B5E3C] mr-2"></i>Ekosistem Sehat',
+          html: `
+            <p>Kami menjunjung tinggi <span class="font-semibold text-[#8B5E3C]"><i class="fas fa-heart mr-1"></i>lingkungan positif</span> dan anti-toksisitas.</p>
+            <p>Setiap anggota berkomitmen pada kode etik: saling mendukung, fair play, dan konten ramah keluarga. Moderator aktif menjaga kenyamanan live.</p>
+            <p><i class="fas fa-smile mr-1"></i> Program "Healthy Streamer" dengan sesi wellbeing bulanan.</p>
+          `
+        },
+        alat: {
+          title: '<i class="fas fa-toolbox text-[#8B5E3C] mr-2"></i>Alat Produk',
+          html: `
+            <p><span class="font-semibold"><i class="fas fa-cog mr-1"></i>Toolkit eksklusif TikLive:</span></p>
+            <ul class="list-disc pl-5 mt-1">
+              <li>Stream Assistant AI untuk interaksi otomatis</li>
+              <li>Dashboard analitik audiens</li>
+              <li>Overlay & template premium gratis</li>
+              <li>Akses beta fitur TikTok terbaru</li>
+            </ul>
+          `
+        },
+        praktik: {
+          title: '<i class="fas fa-medal text-[#8B5E3C] mr-2"></i>Praktik Terbaik',
+          html: `
+            <p>Kami membagikan <span class="font-semibold text-[#8B5E3C]"><i class="fas fa-lightbulb mr-1"></i>panduan sukses</span> yang telah teruji:</p>
+            <ul class="list-decimal pl-5 space-y-1 mt-2">
+              <li>Jadwal live konsisten & interaksi awal</li>
+              <li>Pilih game yang tepat & kuasai niche</li>
+              <li>Gunakan fitur Q&A dan polling</li>
+              <li>Kolaborasi dengan streamer lain</li>
+            </ul>
+            <p class="mt-3"><i class="fas fa-chalkboard-user mr-1"></i>Setiap bulan ada workshop praktik terbaik gratis.</p>
+          `
+        }
+      };
+
+      const menuItems = document.querySelectorAll('.menu-item');
+      const descTitle = document.getElementById('descTitle');
+      const descContent = document.getElementById('descContent');
+
+      function setActiveMenu(key) {
+        if (contentData[key]) {
+          descTitle.innerHTML = contentData[key].title;
+          descContent.innerHTML = contentData[key].html;
+        }
+        
+        descContent.classList.remove('fade-in');
+        void descContent.offsetWidth;
+        descContent.classList.add('fade-in');
+
+        menuItems.forEach(item => {
+          item.classList.remove('active', 'bg-[#f5e6d3]', 'border-l-4', 'border-[#8B5E3C]', 'font-semibold');
+        });
+        
+        const activeItem = Array.from(menuItems).find(el => el.dataset.key === key);
+        if (activeItem) {
+          activeItem.classList.add('active', 'bg-[#f5e6d3]', 'border-l-4', 'border-[#8B5E3C]', 'font-semibold');
+        }
+      }
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          const key = this.dataset.key;
+          if (key) setActiveMenu(key);
+        });
+      });
+
+      setActiveMenu('visi');
+    })();
+  </script>
+</body>
+</html>
