@@ -16,20 +16,20 @@
 
     body {
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      background-color: #FEFCF8;
-      color: #2C221B;
+      background-color: #3B2A1F;
+      color: #D8C08F;
       line-height: 1.5;
     }
 
-    /* Warna coklat mix putih */
+    /* Warna coklat & putih/krem */
     :root {
-      --coklat-utama: #8B5A2B;
-      --coklat-terang: #D9C5A7;
-      --coklat-gelap: #4A2E1B;
-      --putih: #FFFFFF;
-      --putih-krem: #FDF9F2;
-      --abu-muda: #F5F0E8;
-      --shadow: 0 8px 24px rgba(0,0,0,0.05);
+      --coklat-utama: #3B2A1F;
+      --coklat-terang: #5E4535;
+      --coklat-gelap: #2A1E15;
+      --putih: #D8C08F;
+      --putih-krem: #C9B88A;
+      --abu-muda: #4A3A2A;
+      --shadow: 0 8px 24px rgba(0,0,0,0.3);
     }
 
     .container {
@@ -43,9 +43,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--putih);
-      border-bottom: 1px solid var(--coklat-terang);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+      background: #3B2A1F;
+      border-bottom: 1px solid #5E4535;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .header-inner {
@@ -75,23 +75,23 @@
     }
 
     .nav-links a {
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
     }
 
     .nav-links a:hover, .nav-links a.active {
-      color: var(--coklat-utama);
+      color: #F5E6D3;
       font-weight: 600;
     }
 
     .btn-primary {
-      background: var(--coklat-utama);
+      background: #D8C08F;
       border: none;
       border-radius: 40px;
       padding: 8px 24px;
-      color: white;
+      color: #3B2A1F;
       font-weight: 600;
       font-size: 14px;
       cursor: pointer;
@@ -99,7 +99,7 @@
     }
 
     .btn-primary:hover {
-      background: #6F451E;
+      background: #F5E6D3;
     }
 
     .mobile-menu-btn {
@@ -107,7 +107,7 @@
       background: none;
       border: none;
       font-size: 28px;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       cursor: pointer;
       padding: 8px;
     }
@@ -115,8 +115,8 @@
     .mobile-nav {
       display: none;
       flex-direction: column;
-      background: var(--putih);
-      border-top: 1px solid var(--coklat-terang);
+      background: #3B2A1F;
+      border-top: 1px solid #5E4535;
       padding: 20px 24px;
       gap: 20px;
       position: absolute;
@@ -124,7 +124,7 @@
       left: 0;
       width: 100%;
       z-index: 99;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
     .mobile-nav.open {
@@ -139,7 +139,7 @@
     }
 
     .mobile-nav .nav-links-mobile a {
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       text-decoration: none;
       font-weight: 500;
       font-size: 18px;
@@ -147,12 +147,17 @@
       padding: 8px 0;
     }
 
+    .mobile-nav .nav-links-mobile a.active {
+      color: #F5E6D3;
+      font-weight: 600;
+    }
+
     .mobile-nav .btn-primary-mobile {
-      background: var(--coklat-utama);
+      background: #D8C08F;
       border: none;
       border-radius: 40px;
       padding: 12px;
-      color: white;
+      color: #3B2A1F;
       font-weight: 600;
       font-size: 16px;
       width: 100%;
@@ -162,7 +167,7 @@
     /* Hero section */
     .hero-section {
       padding: 60px 0 40px;
-      background: linear-gradient(145deg, var(--putih) 0%, var(--putih-krem) 100%);
+      background: linear-gradient(145deg, #3B2A1F 0%, #2A1E15 100%);
     }
 
     .hero-content {
@@ -180,20 +185,20 @@
     .hero-text h1 {
       font-size: 56px;
       font-weight: 700;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       line-height: 1.2;
     }
 
     .hero-text h1 span {
-      color: var(--coklat-utama);
+      color: #F5E6D3;
     }
 
     .hero-image {
       flex: 1;
-      background: var(--coklat-terang);
+      background: #5E4535;
       border-radius: 32px;
       height: 240px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238B5A2B" width="80px" height="80px"><path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D8C08F" width="80px" height="80px"><path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z"/></svg>');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 80px;
@@ -206,7 +211,7 @@
       gap: 32px;
       margin: 40px 0 32px;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--coklat-terang);
+      border-bottom: 1px solid #5E4535;
       padding-bottom: 12px;
     }
 
@@ -215,7 +220,7 @@
       border: none;
       font-size: 18px;
       font-weight: 500;
-      color: #7A6854;
+      color: #C9B88A;
       cursor: pointer;
       padding: 8px 4px;
       position: relative;
@@ -223,7 +228,7 @@
     }
 
     .filter-btn.active {
-      color: var(--coklat-utama);
+      color: #F5E6D3;
       font-weight: 700;
     }
 
@@ -234,7 +239,7 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background: var(--coklat-utama);
+      background: #D8C08F;
       border-radius: 3px;
     }
 
@@ -254,10 +259,10 @@
     }
 
     .story-card {
-      background: var(--putih);
+      background: #2A1E15;
       border-radius: 28px;
       overflow: hidden;
-      border: 1px solid var(--coklat-terang);
+      border: 1px solid #5E4535;
       box-shadow: var(--shadow);
       transition: transform 0.2s, box-shadow 0.2s;
       height: 100%;
@@ -267,13 +272,14 @@
 
     .story-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.4);
+      border-color: #D8C08F;
     }
 
     .card-media {
       position: relative;
       aspect-ratio: 16 / 9;
-      background: var(--coklat-terang);
+      background: #5E4535;
       overflow: hidden;
     }
 
@@ -307,7 +313,7 @@
     .play-overlay svg {
       width: 20px;
       height: 20px;
-      fill: white;
+      fill: #D8C08F;
       margin-left: 2px;
     }
 
@@ -321,7 +327,7 @@
     .card-title {
       font-size: 22px;
       font-weight: 700;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       margin-bottom: 12px;
     }
 
@@ -333,17 +339,17 @@
     }
 
     .tag {
-      background: rgba(139, 90, 43, 0.1);
+      background: rgba(216, 192, 143, 0.15);
       padding: 4px 12px;
       border-radius: 30px;
       font-size: 12px;
       font-weight: 500;
-      color: var(--coklat-utama);
+      color: #D8C08F;
     }
 
     .card-description {
       font-size: 14px;
-      color: #5A4A38;
+      color: #C9B88A;
       line-height: 1.6;
       margin-bottom: 24px;
       flex: 1;
@@ -353,7 +359,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
-      border-top: 1px solid var(--coklat-terang);
+      border-top: 1px solid #5E4535;
       padding-top: 20px;
       margin-top: auto;
     }
@@ -365,30 +371,30 @@
     .stat-number {
       font-size: 20px;
       font-weight: 800;
-      color: var(--coklat-utama);
+      color: #F5E6D3;
     }
 
     .stat-label {
       font-size: 11px;
-      color: #7A6854;
+      color: #C9B88A;
       margin-top: 4px;
     }
 
     /* Swiper navigation buttons */
     .swiper-button-prev, .swiper-button-next {
-      background: var(--putih);
+      background: #2A1E15;
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border: 1px solid var(--coklat-terang);
-      color: var(--coklat-utama);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 1px solid #5E4535;
+      color: #D8C08F;
       transition: all 0.2s;
     }
 
     .swiper-button-prev:hover, .swiper-button-next:hover {
-      background: var(--coklat-utama);
-      color: white;
+      background: #D8C08F;
+      color: #3B2A1F;
     }
 
     .swiper-button-prev::after, .swiper-button-next::after {
@@ -396,29 +402,33 @@
       font-weight: bold;
     }
 
+    .swiper-pagination-bullet {
+      background: #5E4535;
+    }
+
     .swiper-pagination-bullet-active {
-      background: var(--coklat-utama);
+      background: #D8C08F;
     }
 
     /* CTA Section */
     .cta-section {
-      background: #F8F4EC;
+      background: #2A1E15;
       border-radius: 32px;
       margin: 60px 0;
       padding: 48px 40px;
       text-align: center;
-      border: 1px solid var(--coklat-terang);
+      border: 1px solid #5E4535;
     }
 
     .cta-section h2 {
       font-size: 32px;
       font-weight: 700;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       margin-bottom: 16px;
     }
 
     .cta-section p {
-      color: #6A5A48;
+      color: #C9B88A;
       max-width: 600px;
       margin: 0 auto 24px;
     }
@@ -430,9 +440,9 @@
 
     /* Footer */
     .footer {
-      background: #F8F4EC;
+      background: #2A1E15;
       padding: 60px 0 40px;
-      border-top: 1px solid var(--coklat-terang);
+      border-top: 1px solid #5E4535;
       margin-top: 40px;
     }
 
@@ -447,12 +457,12 @@
       font-size: 16px;
       margin-bottom: 20px;
       font-weight: 600;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
     }
 
     .footer-col a {
       display: block;
-      color: #7A6854;
+      color: #C9B88A;
       text-decoration: none;
       font-size: 14px;
       margin-bottom: 12px;
@@ -460,7 +470,7 @@
     }
 
     .footer-col a:hover {
-      color: var(--coklat-utama);
+      color: #F5E6D3;
     }
 
     .footer-bottom {
@@ -470,17 +480,17 @@
       flex-wrap: wrap;
       gap: 20px;
       padding-top: 30px;
-      border-top: 1px solid var(--coklat-terang);
+      border-top: 1px solid #5E4535;
       font-size: 14px;
-      color: #7A6854;
+      color: #C9B88A;
     }
 
     .language-select {
-      background: transparent;
-      border: 1px solid var(--coklat-terang);
+      background: #3B2A1F;
+      border: 1px solid #D8C08F;
       border-radius: 30px;
       padding: 8px 16px;
-      color: var(--coklat-gelap);
+      color: #D8C08F;
       font-size: 14px;
       cursor: pointer;
     }
@@ -527,41 +537,72 @@
         display: none;
       }
     }
+        .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.3px;
+      color: #D8C08F;
+    }
+
+    .logo-text span {
+      font-weight: 500;
+      color: #F5E6D3;
+    }
+        .logo-icon img {
+      border-radius: 100px;
+    }
   </style>
 </head>
 <body>
-  <header class="header">
+ <header class="header">
     <div class="header-inner">
-      <div class="logo">
-        <svg width="130" height="30" viewBox="0 0 192 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M43.222 1.275c0-.637.515-1.154 1.148-1.154.634 0 1.149.517 1.149 1.154S45.004 2.43 44.37 2.43a1.153 1.153 0 0 1-1.148-1.155m11.334.902h.27l2.05-.004v7.583h2.307V2.173h2.01L61.85.12h-7.298v2.052zm-11.315 7.25v.326h2.27l.008-.603V3.19h-2.285v.207l.015 6.03zm3.472.11v.204h2.273V7.206l.68-.66 2.14 3.199h2.513l-3.204-4.61 2.861-2.793h-2.724l-2.285 2.236V.094H46.71v.452l.007 8.988zm22.79.008v.204h2.273v-2.54l.68-.66 2.14 3.2h2.513l-3.208-4.611 2.861-2.796h-2.724l-2.28 2.232L71.75.485V.094H69.49v.452l.015 9zM60.98 7.37a3.94 3.94 0 0 0 2.133 2.156 3.909 3.909 0 0 0 3.689-.368 3.95 3.95 0 0 0 1.445-1.772 4 4 0 0 0 .226-2.279A3.94 3.94 0 0 0 65.394 2a3.928 3.928 0 0 0-4.032 1.665 4 4 0 0 0-.381 3.71zm5.421-1.526c0 1.066-.725 1.914-1.79 1.914-1.063 0-1.777-.84-1.777-1.91s.717-1.903 1.778-1.903 1.79.832 1.79 1.899M35.573 2.177h2.32v7.572h2.3V2.173h1.854L42.703.12h-7.13z" fill="#8B5A2B"/>
-          <path d="M28.41 10.657v7.09a17.65 17.65 0 0 1-10.633-3.546 17.66 17.66 0 0 1 10.632-3.544" fill="#B87333"/>
-          <path d="M17.748 0c0 5.878 4.783 10.655 10.661 10.655-3.984 0-7.665 1.319-10.632 3.546a17.9 17.9 0 0 1-3.575-3.57A17.64 17.64 0 0 0 17.748 0" fill="#B87333"/>
-          <path d="M28.41 17.748c-5.879 0-10.662 4.783-10.662 10.66 0-3.983-1.32-7.665-3.546-10.632a18 18 0 0 1 3.575-3.575 17.65 17.65 0 0 0 10.632 3.546" fill="#CD7F32"/>
-          <path d="M10.657 0h7.09a17.65 17.65 0 0 1-3.546 10.632A17.66 17.66 0 0 1 10.657 0M17.747 28.409h-7.09a17.65 17.65 0 0 1 3.546-10.633 17.66 17.66 0 0 1 3.544 10.633" fill="white"/>
-        </svg>
-      </div>
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <img src="logo.jpg" alt="" width="50">
+        </div>
+        <div class="logo-text">HUMANIZE <span>HUMAN</span></div>
+      </a>
+      
       <div class="nav-desktop">
         <ul class="nav-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="agency.html">Menjadi Agensi</a></li>
           <li><a href="#">Manfaat</a></li>
-          <li><a href="success_story.html" class="active">Kisah sukses</a></li>
+          <li><a href="success_story.html">Kisah Sukses</a></li>
           <li><a href="#">Praktik Terbaik</a></li>
-          <li><a href="contact.html">Hubungi kami</a></li>
+          <li><a href="contact.html">Hubungi Kami</a></li>
         </ul>
         <button class="btn-primary">Siapkan Agensi →</button>
       </div>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
     </div>
+    
     <div class="mobile-nav" id="mobileNav">
       <ul class="nav-links-mobile">
         <li><a href="index.html">Beranda</a></li>
         <li><a href="agency.html">Menjadi Agensi</a></li>
         <li><a href="#">Manfaat</a></li>
-        <li><a href="success_story.html" class="active">Kisah sukses</a></li>
+        <li><a href="success_story.html">Kisah Sukses</a></li>
         <li><a href="#">Praktik Terbaik</a></li>
-        <li><a href="contact.html">Hubungi kami</a></li>
+        <li><a href="contact.html">Hubungi Kami</a></li>
       </ul>
       <button class="btn-primary-mobile">Siapkan Agensi →</button>
     </div>
@@ -690,7 +731,7 @@
         <h2>Siap memulai Agensimu di LIVE? Hubungi sekarang!</h2>
         <p>Hubungi kami untuk mendapatkan informasi selengkapnya tentang cara menjadi Agensi TikTok.</p>
         <button class="btn-primary btn-large">Hubungi kami →</button>
-        <p style="font-size: 12px; margin-top: 20px; color: #7A6854;">Konten di halaman web ini bukanlah dukungan atau komitmen investasi dari TikTok. Harap pilih Agensi mitramu atau jalankan bisnis Agensimu sendiri dengan hati-hati.</p>
+        <p style="font-size: 12px; margin-top: 20px; color: #C9B88A;">Konten di halaman web ini bukanlah dukungan atau komitmen investasi dari TikTok. Harap pilih Agensi mitramu atau jalankan bisnis Agensimu sendiri dengan hati-hati.</p>
       </div>
     </div>
   </main>
@@ -699,7 +740,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='24' viewBox='0 0 192 29'%3E%3Cpath fill='%238B5A2B' d='M43.222 1.275c0-.637.515-1.154 1.148-1.154.634 0 1.149.517 1.149 1.154S45.004 2.43 44.37 2.43a1.153 1.153 0 0 1-1.148-1.155...'/%3E%3C/svg%3E" alt="TikTok" style="width: 100px;">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='24' viewBox='0 0 192 29'%3E%3Cpath fill='%23D8C08F' d='M43.222 1.275c0-.637.515-1.154 1.148-1.154.634 0 1.149.517 1.149 1.154S45.004 2.43 44.37 2.43a1.153 1.153 0 0 1-1.148-1.155...'/%3E%3C/svg%3E" alt="TikTok" style="width: 100px;">
         </div>
         <div class="footer-col"><h4>Perusahaan</h4><a href="#">Tentang</a><a href="#">Ruang Redaksi</a><a href="#">Karier</a></div>
         <div class="footer-col"><h4>Program</h4><a href="#">TikTok for Good</a><a href="#">Agensi LIVE TikTok</a><a href="#">Pengembang</a><a href="#">Iklan</a></div>
@@ -732,7 +773,6 @@
 
     // Filter functionality (simple demo with swiper update)
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const swiperEl = document.querySelector('.mySwiper');
     let swiperInstance = null;
 
     // Initialize swiper
@@ -754,12 +794,10 @@
     // Filter logic: show/hide slides based on data-year
     function filterStories(year) {
       const slides = document.querySelectorAll('.swiper-slide');
-      let visibleIndices = [];
-      slides.forEach((slide, idx) => {
+      slides.forEach((slide) => {
         const slideYear = slide.getAttribute('data-year');
         if (year === 'all' || slideYear === year) {
           slide.style.display = 'flex';
-          visibleIndices.push(idx);
         } else {
           slide.style.display = 'none';
         }
